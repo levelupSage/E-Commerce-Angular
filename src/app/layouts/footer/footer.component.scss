@@ -1,0 +1,29 @@
+footer{
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #e7e7e7;
+    
+  }
+  
+ 
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
