@@ -24,6 +24,7 @@ export class PostProductComponent {
   ) { }
 
   onFileSelected(event: any) {
+    debugger
     this.selectedFile = event.target.files[0];
     this.previewImage();
   }
@@ -51,8 +52,32 @@ export class PostProductComponent {
       this.listOfCategories = res;
     })
   }
-  
-  addProduct(): void {
 
+  addProduct(): void {
+    if (this.productForm.valid) {
+        const formData : FormData = new FormData();
+        formData.append('file', this.selectedFile);
+        formData.append('name', this.productForm.get('name').value);
+        formData.append('price', this.productForm.get('price').value);
+        formData.append('description', this.productForm.get('description').value);
+      
+        this.adminServe.addProduct(formData).subscribe((res) =>{
+          if(res.id != null){
+            this.snackBar.open('Product Posted Sucessfully !!', 'Close', {
+              duration: 5000
+            });
+            this.router.navigateByUrl('/admin/dashboard');
+          }else{
+            this.snackBar.open(res.message, 'ERROR', {
+              duration: 5000
+            });
+          }
+        })
+      } else {
+      for (const i in this.productForm.controls) {
+        this.productForm.controls[i].markAsDirty();
+        this.productForm.controls[i].updateValueAndValidity();
+      }
+    }
   }
 }
