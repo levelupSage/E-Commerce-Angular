@@ -20,7 +20,7 @@ export class PostProductComponent {
     private fb: FormBuilder,
     private router: Router,
     private snackBar: MatSnackBar,
-    private adminServe: AdminService
+    private adminService: AdminService
   ) { }
 
   onFileSelected(event: any) {
@@ -38,6 +38,7 @@ export class PostProductComponent {
   }
 
   ngOnInit(): void {
+    //console.log('ngOnInit called!');
     this.productForm = this.fb.group({
       categoryId: [null, [Validators.required]],
       name: [null, [Validators.required]],
@@ -48,7 +49,7 @@ export class PostProductComponent {
   }
 
   getAllCategories() {
-    this.adminServe.getAllCategory().subscribe(res => {
+    this.adminService.getAllCategory().subscribe(res => {
       this.listOfCategories = res;
     })
   }
@@ -57,11 +58,12 @@ export class PostProductComponent {
     if (this.productForm.valid) {
         const formData : FormData = new FormData();
         formData.append('file', this.selectedFile);
+        formData.append('categoryId', this.productForm.get('categoryId').value);
         formData.append('name', this.productForm.get('name').value);
         formData.append('price', this.productForm.get('price').value);
         formData.append('description', this.productForm.get('description').value);
-      
-        this.adminServe.addProduct(formData).subscribe((res) =>{
+      //debugger
+        this.adminService.addProduct(formData).subscribe((res) =>{
           if(res.id != null){
             this.snackBar.open('Product Posted Sucessfully !!', 'Close', {
               duration: 5000

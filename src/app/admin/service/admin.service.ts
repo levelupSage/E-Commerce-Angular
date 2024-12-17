@@ -36,4 +36,10 @@ export class AdminService {
       'Authorization', 'Bearer ' + UserStorageService.getToken()
     )
   }
+
+  getAllProducts(): Observable<any>{
+    return this.http.get(BASIC_URL + 'api/admin/products', {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
 }

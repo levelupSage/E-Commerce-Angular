@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <mat-form-field appearance="outline" class="mat-form-field">
+        <mat-form-field appearance="outline" class="form-field">
             <mat-label>Select a Category</mat-label>
             <mat-select formControlName="categoryId" name="categoryId">
                 <mat-option *ngFor="let category of listOfCategories" [value]="category.id">
