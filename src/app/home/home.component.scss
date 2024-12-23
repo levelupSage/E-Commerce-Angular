@@ -1,80 +1,120 @@
 .nav-container {
-  background: #d7e3ff;
+  background: linear-gradient(135deg, #6b7b8c, #d7e3ff);
   height: 60vh;
-  color: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 
-p {
+.nav-align {
+  text-align: center;
+}
+
+.margin-h1 {
+  font-size: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   margin: 0;
 }
 
+.margin-h2 {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.docs-homepage-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.docs-homepage-row-column {
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.docs-homepage-row-column:hover {
+  transform: translateY(-10px);
+}
+
+.docs-homepage-row-column h2 {
+  font-size: 26px;
+  color: #333;
+}
+
+.docs-homepage-row-column p {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.docs-homepage-row-column button {
+  margin-top: 15px;
+}
+
+.separator {
+  margin: 40px 0;
+  border-top: 2px solid #ddd;
+}
+
 .example-card {
-  max-width: 400px;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.example-card:hover {
+  transform: scale(1.05);
 }
 
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
 
-.container {
-  height: 60vh;
+mat-card-title {
+  font-weight: 600;
+}
+
+mat-card-subtitle {
+  color: #777;
+}
+
+mat-card-content {
+  font-size: 14px;
+  color: #333;
+}
+
+mat-card-actions {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.nav-align {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.margin-h1 {
-  margin: 0;
-  color: #001b3f;
-  font-size: 56px;
-  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-}
-
-.margin-h2 {
-  margin: 0;
-  color: #001b3f;
-  font-size: 20px;
-  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-}
-
-.card-cantainer {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  padding: 16px;
-  width: 75%;
-  max-width: 1080px;
-  margin: auto;
-}
-
-.docs-homepage-row-column {
-  display: flex;
-  flex-direction: column;
-  width: 32%;
-}
-
-.docs-homepage-promo{
-  align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    margin: auto;
-}
-
-.separator{
-  display: block;
-  margin: 0;
-  border-top-style: solid;
-  border-top-color: var(--mat-divider-color, var(--mat-app-outline));
-  border-top-width: var(--mat-divider-width);
+mat-card-actions button {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
 }

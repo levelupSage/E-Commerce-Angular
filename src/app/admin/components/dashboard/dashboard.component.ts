@@ -16,13 +16,21 @@ export class DashboardComponent {
     this.getAllProducts();
   }
 
-  getAllProducts(){
+  getAllProducts() {
+    //debugger
     this.products = [];
     this.adminService.getAllProducts().subscribe(res => {
-      res.forEach(element => {
-        element.processedImg = 'data:image/jpeg;base64,' + element.byteImg;
-        this.products.push(element);
-      });
+        res.forEach(element => {
+            if (element.img) {
+                element.processedImg = 'data:image/jpeg;base64,' + element.img;
+            } else {
+                console.warn(`Image data missing for product ID: ${element.id}`);
+                element.processedImg = 'path/to/default/image.jpg';
+            }
+            this.products.push(element);
+        });
+    }, error => {
+        console.error("Error fetching products:", error);
     });
   }
 }

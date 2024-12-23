@@ -1,29 +1,60 @@
-footer{
-    position: static;
-    bottom: 0;
-    width: 100%;
+/* Ensure the page takes up the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
+.container {
+  flex: 1; /* Makes the container take up available space */
+}
+
+/* Footer styles */
 .footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    border-top: 1px solid #e7e7e7;
-    
+  background-color: #b4c1df;
+  padding: 20px 0;
+  border-top: 1px solid #e7e7e7;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure footer stays at the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex-grow: 1; /* Allows other content to expand to fill available space */
+}
+
+@media screen and (max-width: 500px) {
+  .footer p, .footer a {
+      font-size: 12px;
   }
-  
- 
-  .footer p {
-    margin: 0;
-    font-size: 14px;
+
+  .footer {
+      padding: 10px 0;
   }
-  
+
   .footer a {
-    color: #007bff;
-    text-decoration: none;
-    margin-left: 15px;
+      margin-left: 10px;
   }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  
+}
