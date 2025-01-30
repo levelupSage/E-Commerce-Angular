@@ -1,12 +1,22 @@
 <div class="container">
   <div class="row mt-3 mb-4">
     <div class="center">
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form [formGroup]="searchProductForm" class="d-flex" role="search" (submit)="submitForm()">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" formControlName="title">
         <button class="btn btn-outline-success" type="submit">Search</button>
+
+        <!-- <mat-form-field appearance="outline" class="search-input">
+          <mat-label>Enter Keyword to Search</mat-label>
+          <input matInput formControlName="title">
+
+          <button mat-button matSuffix color="primary" [disabled]="searchProductForm.invalid">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field> -->
       </form>
     </div>
   </div>
+  
   <div class="product-list">
     <mat-card class="product-card" *ngFor="let product of products" matRipple>
       <div class="product-image">
