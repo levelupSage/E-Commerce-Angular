@@ -16,7 +16,7 @@
       </form>
     </div>
   </div>
-  
+
   <div class="product-list">
     <mat-card class="product-card" *ngFor="let product of products" matRipple>
       <div class="product-image">
@@ -33,7 +33,7 @@
       <div class="product-info">
         <div class="info-row">
           <span class="info-label">Price:</span>
-          <span class="info-value">${{ product.price }}</span>
+          <span class="info-value">₹{{ product.price }}</span>
         </div>
         <div class="info-row">
           <span class="info-label">Category:</span>
@@ -44,8 +44,11 @@
       <mat-divider></mat-divider>
 
       <div class="actions">
-        <button mat-raised-button color="primary">Details</button>
-        <button mat-button color="accent">Buy Now</button>
+        <button mat-raised-button color="primary" class="update-button"
+          [routerLink]="'/admin/faq/' + product.id">FAQ</button>
+        <button mat-button color="accent" class="update-button"
+          [routerLink]="'/admin/product/' + product.id">Update</button>
+        <button mat-button color="accent" class="update-button" (click)="productDeleteById(product.id)">Delete</button>
       </div>
     </mat-card>
   </div>

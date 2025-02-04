@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AdminService } from '../../service/admin.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,8 @@ export class DashboardComponent {
   searchProductForm!: FormGroup;
 
   constructor(private adminService: AdminService,
-    private fb: FormBuilder) { }
+    private fb: FormBuilder, 
+    private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.getAllProducts();
@@ -58,4 +60,22 @@ export class DashboardComponent {
       console.error("Error fetching products:", error);
     });
   }
+
+  productDeleteById(productId:any){
+    this.adminService.productDeleteById(productId).subscribe(res=>{
+      console.log("API Response:", res); 
+      if(res?.body == null){
+        this.snackBar.open('Product Deleted Successfully', 'close', {
+          duration: 5000
+        });
+        this.getAllProducts();
+      }else{
+        this.snackBar.open(res.message, 'close',{
+          duration: 500,
+          panelClass: 'error-snackbar'
+        });
+      }
+    })
+  }
+
 }

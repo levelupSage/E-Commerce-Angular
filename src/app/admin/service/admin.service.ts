@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserStorageService } from '../../service/storage/user-storage.service';
+import { debug } from 'console';
 
 const BASIC_URL = "http://localhost:8080/"
 
@@ -48,4 +49,11 @@ export class AdminService {
       headers: this.createAuthorizationHeader(),
     });
   }
+
+  productDeleteById(productId:any): Observable<any>{
+    return this.http.delete(BASIC_URL + `api/admin/product/${productId}`, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
 }
