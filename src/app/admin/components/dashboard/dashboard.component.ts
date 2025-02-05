@@ -14,7 +14,7 @@ export class DashboardComponent {
   searchProductForm!: FormGroup;
 
   constructor(private adminService: AdminService,
-    private fb: FormBuilder, 
+    private fb: FormBuilder,
     private snackBar: MatSnackBar) { }
 
   ngOnInit() {
@@ -43,9 +43,9 @@ export class DashboardComponent {
   }
 
   submitForm() {
-    debugger
+    //debugger
     this.products = [];
-    const title = this.searchProductForm.get('title')!.value; 
+    const title = this.searchProductForm.get('title')!.value;
     this.adminService.getAllProductsByName(title).subscribe(res => {
       res.forEach(element => {
         if (element.img) {
@@ -61,16 +61,16 @@ export class DashboardComponent {
     });
   }
 
-  productDeleteById(productId:any){
-    this.adminService.productDeleteById(productId).subscribe(res=>{
-      console.log("API Response:", res); 
-      if(res?.body == null){
+  productDeleteById(productId: any) {
+    this.adminService.productDeleteById(productId).subscribe(res => {
+      console.log("API Response:", res);
+      if (res?.body == null) {
         this.snackBar.open('Product Deleted Successfully', 'close', {
           duration: 5000
         });
         this.getAllProducts();
-      }else{
-        this.snackBar.open(res.message, 'close',{
+      } else {
+        this.snackBar.open(res.message, 'close', {
           duration: 500,
           panelClass: 'error-snackbar'
         });
