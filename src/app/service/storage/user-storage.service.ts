@@ -45,8 +45,9 @@ export class UserStorageService {
   }
 
   static getUserId(): string {
+    debugger
     const user = this.getUser();
-    return user && user.userId ? user.userId : null;
+    return user && user.UserId ? user.UserId : null;
   }
 
   static getUserRole(): string {
@@ -66,6 +67,7 @@ export class UserStorageService {
     if (this.getToken() === null) {
       return false;
     }
+    const UserId: string = this.getUserId();
     const role: string = this.getUserRole();
     return role === 'CUSTOMER';
   }

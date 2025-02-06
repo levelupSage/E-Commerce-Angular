@@ -31,14 +31,22 @@ export class CustomerService {
   }
 
   addToCart(productId: any): Observable<any> {
-    debugger
-    console.log(UserStorageService.getUserId());
+    //debugger
+    //console.log(UserStorageService.getUserId());
     const cartDto = {
       productId: productId,
       userId: UserStorageService.getUserId()
     }
 
     return this.http.post(BASIC_URL + `api/customer/cart`, cartDto, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  addCartByUserId(): Observable<any> {
+    debugger
+    const userId = UserStorageService.getUserId() 
+    return this.http.get(BASIC_URL + `api/customer/cart/${userId}` , {
       headers: this.createAuthorizationHeader(),
     });
   }
