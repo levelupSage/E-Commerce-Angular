@@ -1,1 +1,52 @@
-<p>coupons works!</p>
+<div class="container mx-auto px-4">
+    <mat-card class="my-4">
+        <mat-card-content>
+            <table mat-table [dataSource]="coupons" class="table-auto w-full">
+
+                <ng-container matColumnDef="row">
+                    <th mat-header-cell *matHeaderCellDef class="px-4 py-2">Sr. No.</th>
+                    <td mat-cell *matCellDef="let coupon; let i = index" class="border px-4 py-2">
+                        {{ i + 1 }}
+                    </td>
+                </ng-container>
+
+                <!-- Hidden id Column -->
+                <ng-container matColumnDef="id" hidden>
+                    <th mat-header-cell *matHeaderCellDef>Id</th>
+                    <td mat-cell *matCellDef="let coupon">
+                        <input type="hidden" [value]="coupon.id">
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef class="px-4 py-2">Name</th>
+                    <td mat-cell *matCellDef="let coupon" class="border px-4 py-2">{{ coupon.name }}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="discount">
+                    <th mat-header-cell *matHeaderCellDef class="px-4 py-2">Discount</th>
+                    <td mat-cell *matCellDef="let coupon" class="border px-4 py-2 font-bold">
+                        {{ coupon.discount }} %
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="code">
+                    <th mat-header-cell *matHeaderCellDef class="px-4 py-2">Code</th>
+                    <td mat-cell *matCellDef="let coupon" class="border px-4 py-2">{{ coupon.code }}</td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="expirationDate">
+                    <th mat-header-cell *matHeaderCellDef class="px-4 py-2">Expiration Date</th>
+                    <td mat-cell *matCellDef="let coupon" class="border px-4 py-2">
+                        {{ coupon.expirationDate | date: 'dd/MM/yyyy' }}
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="['row', 'name', 'discount', 'code', 'expirationDate']"></tr>
+                <tr mat-row *matRowDef="let row; columns: ['row', 'name', 'discount', 'code', 'expirationDate']"></tr>
+
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>

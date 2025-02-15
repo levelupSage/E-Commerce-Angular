@@ -45,7 +45,7 @@ export class UserStorageService {
   }
 
   static getUserId(): string {
-    debugger
+    //debugger
     const user = this.getUser();
     return user && user.UserId ? user.UserId : null;
   }

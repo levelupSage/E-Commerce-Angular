@@ -7,8 +7,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-post-coupon',
   templateUrl: './post-coupon.component.html',
-  styleUrl: './post-coupon.component.scss'
+  styleUrls: ['./post-coupon.component.scss']
 })
+
 export class PostCouponComponent {
 
   couponForm: FormGroup;
@@ -18,7 +19,7 @@ export class PostCouponComponent {
     private snackBar: MatSnackBar,
     private adminservice: AdminService) { }
 
-  ngOnint() {
+  ngOnInit() {
     this.couponForm = this.fb.group({
       name: [null, [Validators.required]],
       code: [null, [Validators.required]],
@@ -30,13 +31,13 @@ export class PostCouponComponent {
   addCoupon() {
     if (this.couponForm.valid) {
       this.adminservice.addCoupon(this.couponForm.value).subscribe(res => {
-        if (res.id != null) {
+        if (res?.id != null) {
           this.snackBar.open('Coupon Posted Successfully!', 'Close', {
             duration: 5000
           });
           this.router.navigateByUrl('/admin/dasboard');
         } else {
-          this.snackBar.open(res.message, 'close', {
+          this.snackBar.open(res?.message, 'close', {
             duration: 5000,
             panelClass: 'error-snackbar'
           });

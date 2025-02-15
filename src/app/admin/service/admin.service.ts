@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserStorageService } from '../../service/storage/user-storage.service';
 
-const BASIC_URL = "http://localhost:8080/"
+const BASIC_URL = "http://localhost:8081/"
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +45,19 @@ export class AdminService {
 
   getAllProductsByName(name:any): Observable<any>{
     return this.http.get(BASIC_URL + `api/admin/search/${name}`, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  addCoupon(couponDto: any): Observable<any>{
+    debugger
+    return this.http.post(BASIC_URL + 'api/admin/coupons', couponDto, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  getCoupons(): Observable<any>{
+    return this.http.get(BASIC_URL + 'api/admin/coupons', {
       headers: this.createAuthorizationHeader(),
     });
   }

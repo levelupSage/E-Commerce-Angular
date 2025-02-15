@@ -1,33 +1,53 @@
-<div class="container">
-    <h2>Add Coupon</h2>
-    <form [formGroup]="couponForm" (ngSubmit)="addCoupon()">
-        <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Name</mat-label>
-            <input matInput type="text" placeholder="Name" formControlName="name" />
-            <mat-error *ngIf="couponForm.get('name')?.hasError('required')">This input is required!</mat-error>
-        </mat-form-field>
+<div class="max-w-md mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Add Coupon</h2>
+    <form [formGroup]="couponForm" (ngSubmit)="addCoupon()" class="space-y-6">
 
-        <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Code</mat-label>
-            <input matInput type="text" placeholder="Code" formControlName="code" />
-            <mat-error *ngIf="couponForm.get('code')?.hasError('required')">This input is required!</mat-error>
-        </mat-form-field>
+        <!-- Name Field -->
+        <div>
+            <label for="name" class="block text-gray-700 font-medium mb-1">Name</label>
+            <input id="name" formControlName="name" type="text" placeholder="Name"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <p *ngIf="couponForm.get('name')?.hasError('required') && couponForm.get('name')?.touched"
+                class="text-red-500 text-sm mt-1">
+                This input is required!
+            </p>
+        </div>
 
-        <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Discount %</mat-label>
-            <input matInput type="number" placeholder="Discount" formControlName="discount" />
-            <mat-error *ngIf="couponForm.get('discount')?.hasError('required')">This input is required!</mat-error>
-        </mat-form-field>
+        <!-- Code Field -->
+        <div>
+            <label for="code" class="block text-gray-700 font-medium mb-1">Code</label>
+            <input id="code" formControlName="code" type="text" placeholder="Code"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <p *ngIf="couponForm.get('code')?.hasError('required') && couponForm.get('code')?.touched"
+                class="text-red-500 text-sm mt-1">
+                This input is required!
+            </p>
+        </div>
 
-        <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Expiration Date</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="expirationDate" />
-            <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-            <mat-error *ngIf="couponForm.get('expirationDate')?.hasError('required')">This input is required!</mat-error>
-        </mat-form-field>
-        <button mat-raised-button color="primary" type="submit">Add Coupon</button>
+        <!-- Discount Field -->
+        <div>
+            <label for="discount" class="block text-gray-700 font-medium mb-1">Discount (%)</label>
+            <input id="discount" formControlName="discount" type="number" placeholder="Discount"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <p *ngIf="couponForm.get('discount')?.hasError('required') && couponForm.get('discount')?.touched"
+                class="text-red-500 text-sm mt-1">
+                This input is required!
+            </p>
+        </div>
+
+        <!-- Expiration Date Field -->
+        <div>
+            <label for="expirationDate" class="block text-gray-700 font-medium mb-1">Expiration Date</label>
+            <input id="expirationDate" formControlName="expirationDate" type="date" placeholder="MM/DD/YYYY"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded transition-colors duration-300"
+            [disabled]="couponForm.invalid">
+            Add Coupon
+        </button>
 
     </form>
 </div>
