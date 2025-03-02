@@ -1,19 +1,32 @@
-<div class="container">
-    <h2>Add Category</h2>
+<div class="max-w-md mx-auto p-6 bg-white shadow-md rounded-md mt-4 mb-5">
+    <h2 class="text-xl font-semibold text-center mb-4">Add Category</h2>
+
     <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
-
-        <mat-form-field appearance="outline" class="form-field">
+        <!-- Name Field -->
+        <mat-form-field appearance="fill" floatLabel="always" class="w-full mb-4">
             <mat-label>Name</mat-label>
-            <input matInput type="text" placeholder="Name" formControlName="name"/>
-            <mat-error *ngIf="categoryForm.get('name')?.hasError('required')">This input is required!</mat-error>
+            <input matInput type="text" placeholder="Enter category name" formControlName="name"
+                class="focus:border-blue-500 focus:ring-blue-500" />
+            <mat-error *ngIf="categoryForm.get('name')?.hasError('required')" class="text-red-600">
+                Name is required!
+            </mat-error>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" class="form-field">
+        <!-- Description Field -->
+        <mat-form-field appearance="fill" class="w-full mb-4">
             <mat-label>Description</mat-label>
-            <input matInput type="text" placeholder="Description" formControlName="description"/>
-            <mat-error *ngIf="categoryForm.get('description')?.hasError('required')">This input is required!</mat-error>
+            <textarea matInput placeholder="Enter category description" formControlName="description" rows="3"
+                class="focus:border-blue-500 focus:ring-blue-500"></textarea>
+            <mat-error *ngIf="categoryForm.get('description')?.hasError('required')" class="text-red-600">
+                Description is required!
+            </mat-error>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit">Add Category</button>
+        <!-- Submit Button -->
+        <button mat-raised-button color="primary" type="submit"
+            class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition disabled:bg-gray-300 disabled:text-gray-500"
+            [disabled]="categoryForm.invalid">
+            Add Category
+        </button>
     </form>
 </div>

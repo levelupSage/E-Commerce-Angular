@@ -1,0 +1,16 @@
+{
+  "routes": [
+    "/",
+    "/admin",
+    "/admin/category",
+    "/admin/coupons",
+    "/admin/dashboard",
+    "/admin/post-coupon",
+    "/admin/product",
+    "/customer",
+    "/customer/cart",
+    "/customer/dashboard",
+    "/login",
+    "/signup"
+  ]
+}

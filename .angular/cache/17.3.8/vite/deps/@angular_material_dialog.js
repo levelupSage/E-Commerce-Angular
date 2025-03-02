@@ -9,9 +9,9 @@ import {
   OverlayRef,
   PortalModule,
   TemplatePortal
-} from "./chunk-42FA6SET.js";
-import "./chunk-ZDVXHABK.js";
-import "./chunk-VFAXCJHE.js";
+} from "./chunk-VE7JMMUZ.js";
+import "./chunk-FUEPGXJA.js";
+import "./chunk-OG4RJTDY.js";
 import {
   animate,
   animateChild,
@@ -21,7 +21,7 @@ import {
   style,
   transition,
   trigger
-} from "./chunk-QQDZPWR3.js";
+} from "./chunk-ZHEBWAM7.js";
 import {
   A11yModule,
   Directionality,
@@ -34,11 +34,11 @@ import {
   _getFocusedElementPierceShadowDom,
   coerceNumberProperty,
   hasModifierKey
-} from "./chunk-4KVOJGEU.js";
+} from "./chunk-S5PYTKGS.js";
 import {
   DOCUMENT,
   Location
-} from "./chunk-XHU5GZOC.js";
+} from "./chunk-GLMQ2OFQ.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -83,7 +83,7 @@ import {
   ɵɵqueryRefresh,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-Z5H46ANP.js";
+} from "./chunk-JGD7ZX7P.js";
 import {
   Subject,
   __spreadProps,
@@ -123,7 +123,7 @@ var DialogConfig = class {
 function throwDialogContentAlreadyAttachedError() {
   throw Error("Attempting to attach dialog content after content is already attached");
 }
-var _CdkDialogContainer = class _CdkDialogContainer extends BasePortalOutlet {
+var CdkDialogContainer = class _CdkDialogContainer extends BasePortalOutlet {
   constructor(_elementRef, _focusTrapFactory, _document, _config, _interactivityChecker, _ngZone, _overlayRef, _focusMonitor) {
     super();
     this._elementRef = _elementRef;
@@ -324,44 +324,47 @@ var _CdkDialogContainer = class _CdkDialogContainer extends BasePortalOutlet {
       }
     });
   }
+  static {
+    this.ɵfac = function CdkDialogContainer_Factory(t) {
+      return new (t || _CdkDialogContainer)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(FocusTrapFactory), ɵɵdirectiveInject(DOCUMENT, 8), ɵɵdirectiveInject(DialogConfig), ɵɵdirectiveInject(InteractivityChecker), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(OverlayRef), ɵɵdirectiveInject(FocusMonitor));
+    };
+  }
+  static {
+    this.ɵcmp = ɵɵdefineComponent({
+      type: _CdkDialogContainer,
+      selectors: [["cdk-dialog-container"]],
+      viewQuery: function CdkDialogContainer_Query(rf, ctx) {
+        if (rf & 1) {
+          ɵɵviewQuery(CdkPortalOutlet, 7);
+        }
+        if (rf & 2) {
+          let _t;
+          ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._portalOutlet = _t.first);
+        }
+      },
+      hostAttrs: ["tabindex", "-1", 1, "cdk-dialog-container"],
+      hostVars: 6,
+      hostBindings: function CdkDialogContainer_HostBindings(rf, ctx) {
+        if (rf & 2) {
+          ɵɵattribute("id", ctx._config.id || null)("role", ctx._config.role)("aria-modal", ctx._config.ariaModal)("aria-labelledby", ctx._config.ariaLabel ? null : ctx._ariaLabelledByQueue[0])("aria-label", ctx._config.ariaLabel)("aria-describedby", ctx._config.ariaDescribedBy || null);
+        }
+      },
+      standalone: true,
+      features: [ɵɵInheritDefinitionFeature, ɵɵStandaloneFeature],
+      decls: 1,
+      vars: 0,
+      consts: [["cdkPortalOutlet", ""]],
+      template: function CdkDialogContainer_Template(rf, ctx) {
+        if (rf & 1) {
+          ɵɵtemplate(0, CdkDialogContainer_ng_template_0_Template, 0, 0, "ng-template", 0);
+        }
+      },
+      dependencies: [CdkPortalOutlet],
+      styles: [".cdk-dialog-container{display:block;width:100%;height:100%;min-height:inherit;max-height:inherit}"],
+      encapsulation: 2
+    });
+  }
 };
-_CdkDialogContainer.ɵfac = function CdkDialogContainer_Factory(t) {
-  return new (t || _CdkDialogContainer)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(FocusTrapFactory), ɵɵdirectiveInject(DOCUMENT, 8), ɵɵdirectiveInject(DialogConfig), ɵɵdirectiveInject(InteractivityChecker), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(OverlayRef), ɵɵdirectiveInject(FocusMonitor));
-};
-_CdkDialogContainer.ɵcmp = ɵɵdefineComponent({
-  type: _CdkDialogContainer,
-  selectors: [["cdk-dialog-container"]],
-  viewQuery: function CdkDialogContainer_Query(rf, ctx) {
-    if (rf & 1) {
-      ɵɵviewQuery(CdkPortalOutlet, 7);
-    }
-    if (rf & 2) {
-      let _t;
-      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._portalOutlet = _t.first);
-    }
-  },
-  hostAttrs: ["tabindex", "-1", 1, "cdk-dialog-container"],
-  hostVars: 6,
-  hostBindings: function CdkDialogContainer_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      ɵɵattribute("id", ctx._config.id || null)("role", ctx._config.role)("aria-modal", ctx._config.ariaModal)("aria-labelledby", ctx._config.ariaLabel ? null : ctx._ariaLabelledByQueue[0])("aria-label", ctx._config.ariaLabel)("aria-describedby", ctx._config.ariaDescribedBy || null);
-    }
-  },
-  standalone: true,
-  features: [ɵɵInheritDefinitionFeature, ɵɵStandaloneFeature],
-  decls: 1,
-  vars: 0,
-  consts: [["cdkPortalOutlet", ""]],
-  template: function CdkDialogContainer_Template(rf, ctx) {
-    if (rf & 1) {
-      ɵɵtemplate(0, CdkDialogContainer_ng_template_0_Template, 0, 0, "ng-template", 0);
-    }
-  },
-  dependencies: [CdkPortalOutlet],
-  styles: [".cdk-dialog-container{display:block;width:100%;height:100%;min-height:inherit;max-height:inherit}"],
-  encapsulation: 2
-});
-var CdkDialogContainer = _CdkDialogContainer;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkDialogContainer, [{
     type: Component,
@@ -504,7 +507,7 @@ var DIALOG_SCROLL_STRATEGY = new InjectionToken("DialogScrollStrategy", {
 var DIALOG_DATA = new InjectionToken("DialogData");
 var DEFAULT_DIALOG_CONFIG = new InjectionToken("DefaultDialogConfig");
 var uniqueId = 0;
-var _Dialog = class _Dialog {
+var Dialog = class _Dialog {
   /** Keeps track of the currently-open dialogs. */
   get openDialogs() {
     return this._parentDialog ? this._parentDialog.openDialogs : this._openDialogsAtThisLevel;
@@ -742,16 +745,19 @@ var _Dialog = class _Dialog {
     const parent = this._parentDialog;
     return parent ? parent._getAfterAllClosed() : this._afterAllClosedAtThisLevel;
   }
+  static {
+    this.ɵfac = function Dialog_Factory(t) {
+      return new (t || _Dialog)(ɵɵinject(Overlay), ɵɵinject(Injector), ɵɵinject(DEFAULT_DIALOG_CONFIG, 8), ɵɵinject(_Dialog, 12), ɵɵinject(OverlayContainer), ɵɵinject(DIALOG_SCROLL_STRATEGY));
+    };
+  }
+  static {
+    this.ɵprov = ɵɵdefineInjectable({
+      token: _Dialog,
+      factory: _Dialog.ɵfac,
+      providedIn: "root"
+    });
+  }
 };
-_Dialog.ɵfac = function Dialog_Factory(t) {
-  return new (t || _Dialog)(ɵɵinject(Overlay), ɵɵinject(Injector), ɵɵinject(DEFAULT_DIALOG_CONFIG, 8), ɵɵinject(_Dialog, 12), ɵɵinject(OverlayContainer), ɵɵinject(DIALOG_SCROLL_STRATEGY));
-};
-_Dialog.ɵprov = ɵɵdefineInjectable({
-  token: _Dialog,
-  factory: _Dialog.ɵfac,
-  providedIn: "root"
-});
-var Dialog = _Dialog;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Dialog, [{
     type: Injectable,
@@ -793,33 +799,38 @@ function reverseForEach(items, callback) {
     callback(items[i]);
   }
 }
-var _DialogModule = class _DialogModule {
+var DialogModule = class _DialogModule {
+  static {
+    this.ɵfac = function DialogModule_Factory(t) {
+      return new (t || _DialogModule)();
+    };
+  }
+  static {
+    this.ɵmod = ɵɵdefineNgModule({
+      type: _DialogModule,
+      imports: [OverlayModule, PortalModule, A11yModule, CdkDialogContainer],
+      exports: [
+        // Re-export the PortalModule so that people extending the `CdkDialogContainer`
+        // don't have to remember to import it or be faced with an unhelpful error.
+        PortalModule,
+        CdkDialogContainer
+      ]
+    });
+  }
+  static {
+    this.ɵinj = ɵɵdefineInjector({
+      providers: [Dialog],
+      imports: [
+        OverlayModule,
+        PortalModule,
+        A11yModule,
+        // Re-export the PortalModule so that people extending the `CdkDialogContainer`
+        // don't have to remember to import it or be faced with an unhelpful error.
+        PortalModule
+      ]
+    });
+  }
 };
-_DialogModule.ɵfac = function DialogModule_Factory(t) {
-  return new (t || _DialogModule)();
-};
-_DialogModule.ɵmod = ɵɵdefineNgModule({
-  type: _DialogModule,
-  imports: [OverlayModule, PortalModule, A11yModule, CdkDialogContainer],
-  exports: [
-    // Re-export the PortalModule so that people extending the `CdkDialogContainer`
-    // don't have to remember to import it or be faced with an unhelpful error.
-    PortalModule,
-    CdkDialogContainer
-  ]
-});
-_DialogModule.ɵinj = ɵɵdefineInjector({
-  providers: [Dialog],
-  imports: [
-    OverlayModule,
-    PortalModule,
-    A11yModule,
-    // Re-export the PortalModule so that people extending the `CdkDialogContainer`
-    // don't have to remember to import it or be faced with an unhelpful error.
-    PortalModule
-  ]
-});
-var DialogModule = _DialogModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DialogModule, [{
     type: NgModule,
@@ -864,7 +875,7 @@ var OPENING_CLASS = "mdc-dialog--opening";
 var CLOSING_CLASS = "mdc-dialog--closing";
 var OPEN_ANIMATION_DURATION = 150;
 var CLOSE_ANIMATION_DURATION = 75;
-var _MatDialogContainer = class _MatDialogContainer extends CdkDialogContainer {
+var MatDialogContainer = class _MatDialogContainer extends CdkDialogContainer {
   constructor(elementRef, focusTrapFactory, _document, dialogConfig, interactivityChecker, ngZone, overlayRef, _animationMode, focusMonitor) {
     super(elementRef, focusTrapFactory, _document, dialogConfig, interactivityChecker, ngZone, overlayRef, focusMonitor);
     this._animationMode = _animationMode;
@@ -981,39 +992,42 @@ var _MatDialogContainer = class _MatDialogContainer extends CdkDialogContainer {
     ref.location.nativeElement.classList.add("mat-mdc-dialog-component-host");
     return ref;
   }
+  static {
+    this.ɵfac = function MatDialogContainer_Factory(t) {
+      return new (t || _MatDialogContainer)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(FocusTrapFactory), ɵɵdirectiveInject(DOCUMENT, 8), ɵɵdirectiveInject(MatDialogConfig), ɵɵdirectiveInject(InteractivityChecker), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(OverlayRef), ɵɵdirectiveInject(ANIMATION_MODULE_TYPE, 8), ɵɵdirectiveInject(FocusMonitor));
+    };
+  }
+  static {
+    this.ɵcmp = ɵɵdefineComponent({
+      type: _MatDialogContainer,
+      selectors: [["mat-dialog-container"]],
+      hostAttrs: ["tabindex", "-1", 1, "mat-mdc-dialog-container", "mdc-dialog"],
+      hostVars: 10,
+      hostBindings: function MatDialogContainer_HostBindings(rf, ctx) {
+        if (rf & 2) {
+          ɵɵhostProperty("id", ctx._config.id);
+          ɵɵattribute("aria-modal", ctx._config.ariaModal)("role", ctx._config.role)("aria-labelledby", ctx._config.ariaLabel ? null : ctx._ariaLabelledByQueue[0])("aria-label", ctx._config.ariaLabel)("aria-describedby", ctx._config.ariaDescribedBy || null);
+          ɵɵclassProp("_mat-animation-noopable", !ctx._animationsEnabled)("mat-mdc-dialog-container-with-actions", ctx._actionSectionCount > 0);
+        }
+      },
+      standalone: true,
+      features: [ɵɵInheritDefinitionFeature, ɵɵStandaloneFeature],
+      decls: 3,
+      vars: 0,
+      consts: [[1, "mdc-dialog__container"], [1, "mat-mdc-dialog-surface", "mdc-dialog__surface"], ["cdkPortalOutlet", ""]],
+      template: function MatDialogContainer_Template(rf, ctx) {
+        if (rf & 1) {
+          ɵɵelementStart(0, "div", 0)(1, "div", 1);
+          ɵɵtemplate(2, MatDialogContainer_ng_template_2_Template, 0, 0, "ng-template", 2);
+          ɵɵelementEnd()();
+        }
+      },
+      dependencies: [CdkPortalOutlet],
+      styles: ['.mdc-elevation-overlay{position:absolute;border-radius:inherit;pointer-events:none;opacity:var(--mdc-elevation-overlay-opacity, 0);transition:opacity 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mdc-dialog,.mdc-dialog__scrim{position:fixed;top:0;left:0;align-items:center;justify-content:center;box-sizing:border-box;width:100%;height:100%}.mdc-dialog{display:none;z-index:var(--mdc-dialog-z-index, 7)}.mdc-dialog .mdc-dialog__content{padding:20px 24px 20px 24px}.mdc-dialog .mdc-dialog__surface{min-width:280px}@media(max-width: 592px){.mdc-dialog .mdc-dialog__surface{max-width:calc(100vw - 32px)}}@media(min-width: 592px){.mdc-dialog .mdc-dialog__surface{max-width:560px}}.mdc-dialog .mdc-dialog__surface{max-height:calc(100% - 32px)}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{max-width:none}@media(max-width: 960px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{max-height:560px;width:560px}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__close{right:-12px}}@media(max-width: 720px)and (max-width: 672px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{width:calc(100vw - 112px)}}@media(max-width: 720px)and (min-width: 672px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{width:560px}}@media(max-width: 720px)and (max-height: 720px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{max-height:calc(100vh - 160px)}}@media(max-width: 720px)and (min-height: 720px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{max-height:560px}}@media(max-width: 720px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__close{right:-12px}}@media(max-width: 720px)and (max-height: 400px),(max-width: 600px),(min-width: 720px)and (max-height: 400px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{height:100%;max-height:100vh;max-width:100vw;width:100vw;border-radius:0}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__close{order:-1;left:-12px}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__header{padding:0 16px 9px;justify-content:flex-start}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__title{margin-left:calc(16px - 2 * 12px)}}@media(min-width: 960px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{width:calc(100vw - 400px)}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__close{right:-12px}}.mdc-dialog.mdc-dialog__scrim--hidden .mdc-dialog__scrim{opacity:0}.mdc-dialog__scrim{opacity:0;z-index:-1}.mdc-dialog__container{display:flex;flex-direction:row;align-items:center;justify-content:space-around;box-sizing:border-box;height:100%;opacity:0;pointer-events:none}.mdc-dialog__surface{position:relative;display:flex;flex-direction:column;flex-grow:0;flex-shrink:0;box-sizing:border-box;max-width:100%;max-height:100%;pointer-events:auto;overflow-y:auto;outline:0;transform:scale(0.8)}.mdc-dialog__surface .mdc-elevation-overlay{width:100%;height:100%;top:0;left:0}[dir=rtl] .mdc-dialog__surface,.mdc-dialog__surface[dir=rtl]{text-align:right}@media screen and (forced-colors: active),(-ms-high-contrast: active){.mdc-dialog__surface{outline:2px solid windowText}}.mdc-dialog__surface::before{position:absolute;box-sizing:border-box;width:100%;height:100%;top:0;left:0;border:2px solid rgba(0,0,0,0);border-radius:inherit;content:"";pointer-events:none}@media screen and (forced-colors: active){.mdc-dialog__surface::before{border-color:CanvasText}}@media screen and (-ms-high-contrast: active),screen and (-ms-high-contrast: none){.mdc-dialog__surface::before{content:none}}.mdc-dialog__title{display:block;margin-top:0;position:relative;flex-shrink:0;box-sizing:border-box;margin:0 0 1px;padding:0 24px 9px}.mdc-dialog__title::before{display:inline-block;width:0;height:40px;content:"";vertical-align:0}[dir=rtl] .mdc-dialog__title,.mdc-dialog__title[dir=rtl]{text-align:right}.mdc-dialog--scrollable .mdc-dialog__title{margin-bottom:1px;padding-bottom:15px}.mdc-dialog--fullscreen .mdc-dialog__header{align-items:baseline;border-bottom:1px solid rgba(0,0,0,0);display:inline-flex;justify-content:space-between;padding:0 24px 9px;z-index:1}@media screen and (forced-colors: active){.mdc-dialog--fullscreen .mdc-dialog__header{border-bottom-color:CanvasText}}.mdc-dialog--fullscreen .mdc-dialog__header .mdc-dialog__close{right:-12px}.mdc-dialog--fullscreen .mdc-dialog__title{margin-bottom:0;padding:0;border-bottom:0}.mdc-dialog--fullscreen.mdc-dialog--scrollable .mdc-dialog__title{border-bottom:0;margin-bottom:0}.mdc-dialog--fullscreen .mdc-dialog__close{top:5px}.mdc-dialog--fullscreen.mdc-dialog--scrollable .mdc-dialog__actions{border-top:1px solid rgba(0,0,0,0)}@media screen and (forced-colors: active){.mdc-dialog--fullscreen.mdc-dialog--scrollable .mdc-dialog__actions{border-top-color:CanvasText}}.mdc-dialog--fullscreen--titleless .mdc-dialog__close{margin-top:4px}.mdc-dialog--fullscreen--titleless.mdc-dialog--scrollable .mdc-dialog__close{margin-top:0}.mdc-dialog__content{flex-grow:1;box-sizing:border-box;margin:0;overflow:auto}.mdc-dialog__content>:first-child{margin-top:0}.mdc-dialog__content>:last-child{margin-bottom:0}.mdc-dialog__title+.mdc-dialog__content,.mdc-dialog__header+.mdc-dialog__content{padding-top:0}.mdc-dialog--scrollable .mdc-dialog__title+.mdc-dialog__content{padding-top:8px;padding-bottom:8px}.mdc-dialog__content .mdc-deprecated-list:first-child:last-child{padding:6px 0 0}.mdc-dialog--scrollable .mdc-dialog__content .mdc-deprecated-list:first-child:last-child{padding:0}.mdc-dialog__actions{display:flex;position:relative;flex-shrink:0;flex-wrap:wrap;align-items:center;justify-content:flex-end;box-sizing:border-box;min-height:52px;margin:0;padding:8px;border-top:1px solid rgba(0,0,0,0)}@media screen and (forced-colors: active){.mdc-dialog__actions{border-top-color:CanvasText}}.mdc-dialog--stacked .mdc-dialog__actions{flex-direction:column;align-items:flex-end}.mdc-dialog__button{margin-left:8px;margin-right:0;max-width:100%;text-align:right}[dir=rtl] .mdc-dialog__button,.mdc-dialog__button[dir=rtl]{margin-left:0;margin-right:8px}.mdc-dialog__button:first-child{margin-left:0;margin-right:0}[dir=rtl] .mdc-dialog__button:first-child,.mdc-dialog__button:first-child[dir=rtl]{margin-left:0;margin-right:0}[dir=rtl] .mdc-dialog__button,.mdc-dialog__button[dir=rtl]{text-align:left}.mdc-dialog--stacked .mdc-dialog__button:not(:first-child){margin-top:12px}.mdc-dialog--open,.mdc-dialog--opening,.mdc-dialog--closing{display:flex}.mdc-dialog--opening .mdc-dialog__scrim{transition:opacity 150ms linear}.mdc-dialog--opening .mdc-dialog__container{transition:opacity 75ms linear,transform 150ms 0ms cubic-bezier(0, 0, 0.2, 1)}.mdc-dialog--closing .mdc-dialog__scrim,.mdc-dialog--closing .mdc-dialog__container{transition:opacity 75ms linear}.mdc-dialog--closing .mdc-dialog__container{transform:none}.mdc-dialog--closing .mdc-dialog__surface{transform:none}.mdc-dialog--open .mdc-dialog__scrim{opacity:1}.mdc-dialog--open .mdc-dialog__container{opacity:1}.mdc-dialog--open .mdc-dialog__surface{transform:none}.mdc-dialog--open.mdc-dialog__surface-scrim--shown .mdc-dialog__surface-scrim{opacity:1}.mdc-dialog--open.mdc-dialog__surface-scrim--hiding .mdc-dialog__surface-scrim{transition:opacity 75ms linear}.mdc-dialog--open.mdc-dialog__surface-scrim--showing .mdc-dialog__surface-scrim{transition:opacity 150ms linear}.mdc-dialog__surface-scrim{display:none;opacity:0;position:absolute;width:100%;height:100%;z-index:1}.mdc-dialog__surface-scrim--shown .mdc-dialog__surface-scrim,.mdc-dialog__surface-scrim--showing .mdc-dialog__surface-scrim,.mdc-dialog__surface-scrim--hiding .mdc-dialog__surface-scrim{display:block}.mdc-dialog-scroll-lock{overflow:hidden}.mdc-dialog--no-content-padding .mdc-dialog__content{padding:0}.mdc-dialog--sheet .mdc-dialog__container .mdc-dialog__close{right:12px;top:9px;position:absolute;z-index:1}.mdc-dialog__scrim--removed{pointer-events:none}.mdc-dialog__scrim--removed .mdc-dialog__scrim,.mdc-dialog__scrim--removed .mdc-dialog__surface-scrim{display:none}.mat-mdc-dialog-content{max-height:65vh}.mat-mdc-dialog-container{position:static;display:block}.mat-mdc-dialog-container,.mat-mdc-dialog-container .mdc-dialog__container,.mat-mdc-dialog-container .mdc-dialog__surface{max-height:inherit;min-height:inherit;min-width:inherit;max-width:inherit}.mat-mdc-dialog-container .mdc-dialog__surface{width:100%;height:100%}.mat-mdc-dialog-component-host{display:contents}.mat-mdc-dialog-container{--mdc-dialog-container-elevation: var(--mdc-dialog-container-elevation-shadow);outline:0}.mat-mdc-dialog-container .mdc-dialog__surface{background-color:var(--mdc-dialog-container-color, white)}.mat-mdc-dialog-container .mdc-dialog__surface{box-shadow:var(--mdc-dialog-container-elevation, 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12))}.mat-mdc-dialog-container .mdc-dialog__surface{border-radius:var(--mdc-dialog-container-shape, 4px)}.mat-mdc-dialog-container .mdc-dialog__title{font-family:var(--mdc-dialog-subhead-font, Roboto, sans-serif);line-height:var(--mdc-dialog-subhead-line-height, 1.5rem);font-size:var(--mdc-dialog-subhead-size, 1rem);font-weight:var(--mdc-dialog-subhead-weight, 400);letter-spacing:var(--mdc-dialog-subhead-tracking, 0.03125em)}.mat-mdc-dialog-container .mdc-dialog__title{color:var(--mdc-dialog-subhead-color, rgba(0, 0, 0, 0.87))}.mat-mdc-dialog-container .mdc-dialog__content{font-family:var(--mdc-dialog-supporting-text-font, Roboto, sans-serif);line-height:var(--mdc-dialog-supporting-text-line-height, 1.5rem);font-size:var(--mdc-dialog-supporting-text-size, 1rem);font-weight:var(--mdc-dialog-supporting-text-weight, 400);letter-spacing:var(--mdc-dialog-supporting-text-tracking, 0.03125em)}.mat-mdc-dialog-container .mdc-dialog__content{color:var(--mdc-dialog-supporting-text-color, rgba(0, 0, 0, 0.6))}.mat-mdc-dialog-container .mdc-dialog__container{transition:opacity linear var(--mat-dialog-transition-duration, 0ms)}.mat-mdc-dialog-container .mdc-dialog__surface{transition:transform var(--mat-dialog-transition-duration, 0ms) 0ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__container,.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__surface{transition:none}.cdk-overlay-pane.mat-mdc-dialog-panel{max-width:var(--mat-dialog-container-max-width, 80vw);min-width:var(--mat-dialog-container-min-width, 0)}@media(max-width: 599px){.cdk-overlay-pane.mat-mdc-dialog-panel{max-width:var(--mat-dialog-container-small-max-width, 80vw)}}.mat-mdc-dialog-title{padding:var(--mat-dialog-headline-padding, 0 24px 9px)}.mat-mdc-dialog-content{display:block}.mat-mdc-dialog-container .mat-mdc-dialog-content{padding:var(--mat-dialog-content-padding, 20px 24px)}.mat-mdc-dialog-container-with-actions .mat-mdc-dialog-content{padding:var(--mat-dialog-with-actions-content-padding, 20px 24px)}.mat-mdc-dialog-container .mat-mdc-dialog-title+.mat-mdc-dialog-content{padding-top:0}.mat-mdc-dialog-actions{padding:var(--mat-dialog-actions-padding, 8px);justify-content:var(--mat-dialog-actions-alignment, start)}.mat-mdc-dialog-actions.mat-mdc-dialog-actions-align-start,.mat-mdc-dialog-actions[align=start]{justify-content:start}.mat-mdc-dialog-actions.mat-mdc-dialog-actions-align-center,.mat-mdc-dialog-actions[align=center]{justify-content:center}.mat-mdc-dialog-actions.mat-mdc-dialog-actions-align-end,.mat-mdc-dialog-actions[align=end]{justify-content:flex-end}.mat-mdc-dialog-actions .mat-button-base+.mat-button-base,.mat-mdc-dialog-actions .mat-mdc-button-base+.mat-mdc-button-base{margin-left:8px}[dir=rtl] .mat-mdc-dialog-actions .mat-button-base+.mat-button-base,[dir=rtl] .mat-mdc-dialog-actions .mat-mdc-button-base+.mat-mdc-button-base{margin-left:0;margin-right:8px}'],
+      encapsulation: 2
+    });
+  }
 };
-_MatDialogContainer.ɵfac = function MatDialogContainer_Factory(t) {
-  return new (t || _MatDialogContainer)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(FocusTrapFactory), ɵɵdirectiveInject(DOCUMENT, 8), ɵɵdirectiveInject(MatDialogConfig), ɵɵdirectiveInject(InteractivityChecker), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(OverlayRef), ɵɵdirectiveInject(ANIMATION_MODULE_TYPE, 8), ɵɵdirectiveInject(FocusMonitor));
-};
-_MatDialogContainer.ɵcmp = ɵɵdefineComponent({
-  type: _MatDialogContainer,
-  selectors: [["mat-dialog-container"]],
-  hostAttrs: ["tabindex", "-1", 1, "mat-mdc-dialog-container", "mdc-dialog"],
-  hostVars: 10,
-  hostBindings: function MatDialogContainer_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      ɵɵhostProperty("id", ctx._config.id);
-      ɵɵattribute("aria-modal", ctx._config.ariaModal)("role", ctx._config.role)("aria-labelledby", ctx._config.ariaLabel ? null : ctx._ariaLabelledByQueue[0])("aria-label", ctx._config.ariaLabel)("aria-describedby", ctx._config.ariaDescribedBy || null);
-      ɵɵclassProp("_mat-animation-noopable", !ctx._animationsEnabled)("mat-mdc-dialog-container-with-actions", ctx._actionSectionCount > 0);
-    }
-  },
-  standalone: true,
-  features: [ɵɵInheritDefinitionFeature, ɵɵStandaloneFeature],
-  decls: 3,
-  vars: 0,
-  consts: [[1, "mdc-dialog__container"], [1, "mat-mdc-dialog-surface", "mdc-dialog__surface"], ["cdkPortalOutlet", ""]],
-  template: function MatDialogContainer_Template(rf, ctx) {
-    if (rf & 1) {
-      ɵɵelementStart(0, "div", 0)(1, "div", 1);
-      ɵɵtemplate(2, MatDialogContainer_ng_template_2_Template, 0, 0, "ng-template", 2);
-      ɵɵelementEnd()();
-    }
-  },
-  dependencies: [CdkPortalOutlet],
-  styles: ['.mdc-elevation-overlay{position:absolute;border-radius:inherit;pointer-events:none;opacity:var(--mdc-elevation-overlay-opacity, 0);transition:opacity 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mdc-dialog,.mdc-dialog__scrim{position:fixed;top:0;left:0;align-items:center;justify-content:center;box-sizing:border-box;width:100%;height:100%}.mdc-dialog{display:none;z-index:var(--mdc-dialog-z-index, 7)}.mdc-dialog .mdc-dialog__content{padding:20px 24px 20px 24px}.mdc-dialog .mdc-dialog__surface{min-width:280px}@media(max-width: 592px){.mdc-dialog .mdc-dialog__surface{max-width:calc(100vw - 32px)}}@media(min-width: 592px){.mdc-dialog .mdc-dialog__surface{max-width:560px}}.mdc-dialog .mdc-dialog__surface{max-height:calc(100% - 32px)}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{max-width:none}@media(max-width: 960px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{max-height:560px;width:560px}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__close{right:-12px}}@media(max-width: 720px)and (max-width: 672px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{width:calc(100vw - 112px)}}@media(max-width: 720px)and (min-width: 672px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{width:560px}}@media(max-width: 720px)and (max-height: 720px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{max-height:calc(100vh - 160px)}}@media(max-width: 720px)and (min-height: 720px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{max-height:560px}}@media(max-width: 720px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__close{right:-12px}}@media(max-width: 720px)and (max-height: 400px),(max-width: 600px),(min-width: 720px)and (max-height: 400px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{height:100%;max-height:100vh;max-width:100vw;width:100vw;border-radius:0}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__close{order:-1;left:-12px}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__header{padding:0 16px 9px;justify-content:flex-start}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__title{margin-left:calc(16px - 2 * 12px)}}@media(min-width: 960px){.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface{width:calc(100vw - 400px)}.mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__close{right:-12px}}.mdc-dialog.mdc-dialog__scrim--hidden .mdc-dialog__scrim{opacity:0}.mdc-dialog__scrim{opacity:0;z-index:-1}.mdc-dialog__container{display:flex;flex-direction:row;align-items:center;justify-content:space-around;box-sizing:border-box;height:100%;opacity:0;pointer-events:none}.mdc-dialog__surface{position:relative;display:flex;flex-direction:column;flex-grow:0;flex-shrink:0;box-sizing:border-box;max-width:100%;max-height:100%;pointer-events:auto;overflow-y:auto;outline:0;transform:scale(0.8)}.mdc-dialog__surface .mdc-elevation-overlay{width:100%;height:100%;top:0;left:0}[dir=rtl] .mdc-dialog__surface,.mdc-dialog__surface[dir=rtl]{text-align:right}@media screen and (forced-colors: active),(-ms-high-contrast: active){.mdc-dialog__surface{outline:2px solid windowText}}.mdc-dialog__surface::before{position:absolute;box-sizing:border-box;width:100%;height:100%;top:0;left:0;border:2px solid rgba(0,0,0,0);border-radius:inherit;content:"";pointer-events:none}@media screen and (forced-colors: active){.mdc-dialog__surface::before{border-color:CanvasText}}@media screen and (-ms-high-contrast: active),screen and (-ms-high-contrast: none){.mdc-dialog__surface::before{content:none}}.mdc-dialog__title{display:block;margin-top:0;position:relative;flex-shrink:0;box-sizing:border-box;margin:0 0 1px;padding:0 24px 9px}.mdc-dialog__title::before{display:inline-block;width:0;height:40px;content:"";vertical-align:0}[dir=rtl] .mdc-dialog__title,.mdc-dialog__title[dir=rtl]{text-align:right}.mdc-dialog--scrollable .mdc-dialog__title{margin-bottom:1px;padding-bottom:15px}.mdc-dialog--fullscreen .mdc-dialog__header{align-items:baseline;border-bottom:1px solid rgba(0,0,0,0);display:inline-flex;justify-content:space-between;padding:0 24px 9px;z-index:1}@media screen and (forced-colors: active){.mdc-dialog--fullscreen .mdc-dialog__header{border-bottom-color:CanvasText}}.mdc-dialog--fullscreen .mdc-dialog__header .mdc-dialog__close{right:-12px}.mdc-dialog--fullscreen .mdc-dialog__title{margin-bottom:0;padding:0;border-bottom:0}.mdc-dialog--fullscreen.mdc-dialog--scrollable .mdc-dialog__title{border-bottom:0;margin-bottom:0}.mdc-dialog--fullscreen .mdc-dialog__close{top:5px}.mdc-dialog--fullscreen.mdc-dialog--scrollable .mdc-dialog__actions{border-top:1px solid rgba(0,0,0,0)}@media screen and (forced-colors: active){.mdc-dialog--fullscreen.mdc-dialog--scrollable .mdc-dialog__actions{border-top-color:CanvasText}}.mdc-dialog--fullscreen--titleless .mdc-dialog__close{margin-top:4px}.mdc-dialog--fullscreen--titleless.mdc-dialog--scrollable .mdc-dialog__close{margin-top:0}.mdc-dialog__content{flex-grow:1;box-sizing:border-box;margin:0;overflow:auto}.mdc-dialog__content>:first-child{margin-top:0}.mdc-dialog__content>:last-child{margin-bottom:0}.mdc-dialog__title+.mdc-dialog__content,.mdc-dialog__header+.mdc-dialog__content{padding-top:0}.mdc-dialog--scrollable .mdc-dialog__title+.mdc-dialog__content{padding-top:8px;padding-bottom:8px}.mdc-dialog__content .mdc-deprecated-list:first-child:last-child{padding:6px 0 0}.mdc-dialog--scrollable .mdc-dialog__content .mdc-deprecated-list:first-child:last-child{padding:0}.mdc-dialog__actions{display:flex;position:relative;flex-shrink:0;flex-wrap:wrap;align-items:center;justify-content:flex-end;box-sizing:border-box;min-height:52px;margin:0;padding:8px;border-top:1px solid rgba(0,0,0,0)}@media screen and (forced-colors: active){.mdc-dialog__actions{border-top-color:CanvasText}}.mdc-dialog--stacked .mdc-dialog__actions{flex-direction:column;align-items:flex-end}.mdc-dialog__button{margin-left:8px;margin-right:0;max-width:100%;text-align:right}[dir=rtl] .mdc-dialog__button,.mdc-dialog__button[dir=rtl]{margin-left:0;margin-right:8px}.mdc-dialog__button:first-child{margin-left:0;margin-right:0}[dir=rtl] .mdc-dialog__button:first-child,.mdc-dialog__button:first-child[dir=rtl]{margin-left:0;margin-right:0}[dir=rtl] .mdc-dialog__button,.mdc-dialog__button[dir=rtl]{text-align:left}.mdc-dialog--stacked .mdc-dialog__button:not(:first-child){margin-top:12px}.mdc-dialog--open,.mdc-dialog--opening,.mdc-dialog--closing{display:flex}.mdc-dialog--opening .mdc-dialog__scrim{transition:opacity 150ms linear}.mdc-dialog--opening .mdc-dialog__container{transition:opacity 75ms linear,transform 150ms 0ms cubic-bezier(0, 0, 0.2, 1)}.mdc-dialog--closing .mdc-dialog__scrim,.mdc-dialog--closing .mdc-dialog__container{transition:opacity 75ms linear}.mdc-dialog--closing .mdc-dialog__container{transform:none}.mdc-dialog--closing .mdc-dialog__surface{transform:none}.mdc-dialog--open .mdc-dialog__scrim{opacity:1}.mdc-dialog--open .mdc-dialog__container{opacity:1}.mdc-dialog--open .mdc-dialog__surface{transform:none}.mdc-dialog--open.mdc-dialog__surface-scrim--shown .mdc-dialog__surface-scrim{opacity:1}.mdc-dialog--open.mdc-dialog__surface-scrim--hiding .mdc-dialog__surface-scrim{transition:opacity 75ms linear}.mdc-dialog--open.mdc-dialog__surface-scrim--showing .mdc-dialog__surface-scrim{transition:opacity 150ms linear}.mdc-dialog__surface-scrim{display:none;opacity:0;position:absolute;width:100%;height:100%;z-index:1}.mdc-dialog__surface-scrim--shown .mdc-dialog__surface-scrim,.mdc-dialog__surface-scrim--showing .mdc-dialog__surface-scrim,.mdc-dialog__surface-scrim--hiding .mdc-dialog__surface-scrim{display:block}.mdc-dialog-scroll-lock{overflow:hidden}.mdc-dialog--no-content-padding .mdc-dialog__content{padding:0}.mdc-dialog--sheet .mdc-dialog__container .mdc-dialog__close{right:12px;top:9px;position:absolute;z-index:1}.mdc-dialog__scrim--removed{pointer-events:none}.mdc-dialog__scrim--removed .mdc-dialog__scrim,.mdc-dialog__scrim--removed .mdc-dialog__surface-scrim{display:none}.mat-mdc-dialog-content{max-height:65vh}.mat-mdc-dialog-container{position:static;display:block}.mat-mdc-dialog-container,.mat-mdc-dialog-container .mdc-dialog__container,.mat-mdc-dialog-container .mdc-dialog__surface{max-height:inherit;min-height:inherit;min-width:inherit;max-width:inherit}.mat-mdc-dialog-container .mdc-dialog__surface{width:100%;height:100%}.mat-mdc-dialog-component-host{display:contents}.mat-mdc-dialog-container{--mdc-dialog-container-elevation: var(--mdc-dialog-container-elevation-shadow);outline:0}.mat-mdc-dialog-container .mdc-dialog__surface{background-color:var(--mdc-dialog-container-color, white)}.mat-mdc-dialog-container .mdc-dialog__surface{box-shadow:var(--mdc-dialog-container-elevation, 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12))}.mat-mdc-dialog-container .mdc-dialog__surface{border-radius:var(--mdc-dialog-container-shape, 4px)}.mat-mdc-dialog-container .mdc-dialog__title{font-family:var(--mdc-dialog-subhead-font, Roboto, sans-serif);line-height:var(--mdc-dialog-subhead-line-height, 1.5rem);font-size:var(--mdc-dialog-subhead-size, 1rem);font-weight:var(--mdc-dialog-subhead-weight, 400);letter-spacing:var(--mdc-dialog-subhead-tracking, 0.03125em)}.mat-mdc-dialog-container .mdc-dialog__title{color:var(--mdc-dialog-subhead-color, rgba(0, 0, 0, 0.87))}.mat-mdc-dialog-container .mdc-dialog__content{font-family:var(--mdc-dialog-supporting-text-font, Roboto, sans-serif);line-height:var(--mdc-dialog-supporting-text-line-height, 1.5rem);font-size:var(--mdc-dialog-supporting-text-size, 1rem);font-weight:var(--mdc-dialog-supporting-text-weight, 400);letter-spacing:var(--mdc-dialog-supporting-text-tracking, 0.03125em)}.mat-mdc-dialog-container .mdc-dialog__content{color:var(--mdc-dialog-supporting-text-color, rgba(0, 0, 0, 0.6))}.mat-mdc-dialog-container .mdc-dialog__container{transition:opacity linear var(--mat-dialog-transition-duration, 0ms)}.mat-mdc-dialog-container .mdc-dialog__surface{transition:transform var(--mat-dialog-transition-duration, 0ms) 0ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__container,.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__surface{transition:none}.cdk-overlay-pane.mat-mdc-dialog-panel{max-width:var(--mat-dialog-container-max-width, 80vw);min-width:var(--mat-dialog-container-min-width, 0)}@media(max-width: 599px){.cdk-overlay-pane.mat-mdc-dialog-panel{max-width:var(--mat-dialog-container-small-max-width, 80vw)}}.mat-mdc-dialog-title{padding:var(--mat-dialog-headline-padding, 0 24px 9px)}.mat-mdc-dialog-content{display:block}.mat-mdc-dialog-container .mat-mdc-dialog-content{padding:var(--mat-dialog-content-padding, 20px 24px)}.mat-mdc-dialog-container-with-actions .mat-mdc-dialog-content{padding:var(--mat-dialog-with-actions-content-padding, 20px 24px)}.mat-mdc-dialog-container .mat-mdc-dialog-title+.mat-mdc-dialog-content{padding-top:0}.mat-mdc-dialog-actions{padding:var(--mat-dialog-actions-padding, 8px);justify-content:var(--mat-dialog-actions-alignment, start)}.mat-mdc-dialog-actions.mat-mdc-dialog-actions-align-start,.mat-mdc-dialog-actions[align=start]{justify-content:start}.mat-mdc-dialog-actions.mat-mdc-dialog-actions-align-center,.mat-mdc-dialog-actions[align=center]{justify-content:center}.mat-mdc-dialog-actions.mat-mdc-dialog-actions-align-end,.mat-mdc-dialog-actions[align=end]{justify-content:flex-end}.mat-mdc-dialog-actions .mat-button-base+.mat-button-base,.mat-mdc-dialog-actions .mat-mdc-button-base+.mat-mdc-button-base{margin-left:8px}[dir=rtl] .mat-mdc-dialog-actions .mat-button-base+.mat-button-base,[dir=rtl] .mat-mdc-dialog-actions .mat-mdc-button-base+.mat-mdc-button-base{margin-left:0;margin-right:8px}'],
-  encapsulation: 2
-});
-var MatDialogContainer = _MatDialogContainer;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDialogContainer, [{
     type: Component,
@@ -1246,7 +1260,7 @@ var MAT_DIALOG_SCROLL_STRATEGY_PROVIDER = {
   useFactory: MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY
 };
 var uniqueId2 = 0;
-var _MatDialog = class _MatDialog {
+var MatDialog = class _MatDialog {
   /** Keeps track of the currently-open dialogs. */
   get openDialogs() {
     return this._parentDialog ? this._parentDialog.openDialogs : this._openDialogsAtThisLevel;
@@ -1363,16 +1377,19 @@ var _MatDialog = class _MatDialog {
       dialogs[i].close();
     }
   }
+  static {
+    this.ɵfac = function MatDialog_Factory(t) {
+      return new (t || _MatDialog)(ɵɵinject(Overlay), ɵɵinject(Injector), ɵɵinject(Location, 8), ɵɵinject(MAT_DIALOG_DEFAULT_OPTIONS, 8), ɵɵinject(MAT_DIALOG_SCROLL_STRATEGY), ɵɵinject(_MatDialog, 12), ɵɵinject(OverlayContainer), ɵɵinject(ANIMATION_MODULE_TYPE, 8));
+    };
+  }
+  static {
+    this.ɵprov = ɵɵdefineInjectable({
+      token: _MatDialog,
+      factory: _MatDialog.ɵfac,
+      providedIn: "root"
+    });
+  }
 };
-_MatDialog.ɵfac = function MatDialog_Factory(t) {
-  return new (t || _MatDialog)(ɵɵinject(Overlay), ɵɵinject(Injector), ɵɵinject(Location, 8), ɵɵinject(MAT_DIALOG_DEFAULT_OPTIONS, 8), ɵɵinject(MAT_DIALOG_SCROLL_STRATEGY), ɵɵinject(_MatDialog, 12), ɵɵinject(OverlayContainer), ɵɵinject(ANIMATION_MODULE_TYPE, 8));
-};
-_MatDialog.ɵprov = ɵɵdefineInjectable({
-  token: _MatDialog,
-  factory: _MatDialog.ɵfac,
-  providedIn: "root"
-});
-var MatDialog = _MatDialog;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDialog, [{
     type: Injectable,
@@ -1422,7 +1439,7 @@ var MatDialog = _MatDialog;
   }], null);
 })();
 var dialogElementUid = 0;
-var _MatDialogClose = class _MatDialogClose {
+var MatDialogClose = class _MatDialogClose {
   constructor(dialogRef, _elementRef, _dialog) {
     this.dialogRef = dialogRef;
     this._elementRef = _elementRef;
@@ -1443,35 +1460,38 @@ var _MatDialogClose = class _MatDialogClose {
   _onButtonClick(event) {
     _closeDialogVia(this.dialogRef, event.screenX === 0 && event.screenY === 0 ? "keyboard" : "mouse", this.dialogResult);
   }
+  static {
+    this.ɵfac = function MatDialogClose_Factory(t) {
+      return new (t || _MatDialogClose)(ɵɵdirectiveInject(MatDialogRef, 8), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(MatDialog));
+    };
+  }
+  static {
+    this.ɵdir = ɵɵdefineDirective({
+      type: _MatDialogClose,
+      selectors: [["", "mat-dialog-close", ""], ["", "matDialogClose", ""]],
+      hostVars: 2,
+      hostBindings: function MatDialogClose_HostBindings(rf, ctx) {
+        if (rf & 1) {
+          ɵɵlistener("click", function MatDialogClose_click_HostBindingHandler($event) {
+            return ctx._onButtonClick($event);
+          });
+        }
+        if (rf & 2) {
+          ɵɵattribute("aria-label", ctx.ariaLabel || null)("type", ctx.type);
+        }
+      },
+      inputs: {
+        ariaLabel: [InputFlags.None, "aria-label", "ariaLabel"],
+        type: "type",
+        dialogResult: [InputFlags.None, "mat-dialog-close", "dialogResult"],
+        _matDialogClose: [InputFlags.None, "matDialogClose", "_matDialogClose"]
+      },
+      exportAs: ["matDialogClose"],
+      standalone: true,
+      features: [ɵɵNgOnChangesFeature]
+    });
+  }
 };
-_MatDialogClose.ɵfac = function MatDialogClose_Factory(t) {
-  return new (t || _MatDialogClose)(ɵɵdirectiveInject(MatDialogRef, 8), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(MatDialog));
-};
-_MatDialogClose.ɵdir = ɵɵdefineDirective({
-  type: _MatDialogClose,
-  selectors: [["", "mat-dialog-close", ""], ["", "matDialogClose", ""]],
-  hostVars: 2,
-  hostBindings: function MatDialogClose_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      ɵɵlistener("click", function MatDialogClose_click_HostBindingHandler($event) {
-        return ctx._onButtonClick($event);
-      });
-    }
-    if (rf & 2) {
-      ɵɵattribute("aria-label", ctx.ariaLabel || null)("type", ctx.type);
-    }
-  },
-  inputs: {
-    ariaLabel: [InputFlags.None, "aria-label", "ariaLabel"],
-    type: "type",
-    dialogResult: [InputFlags.None, "mat-dialog-close", "dialogResult"],
-    _matDialogClose: [InputFlags.None, "matDialogClose", "_matDialogClose"]
-  },
-  exportAs: ["matDialogClose"],
-  standalone: true,
-  features: [ɵɵNgOnChangesFeature]
-});
-var MatDialogClose = _MatDialogClose;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDialogClose, [{
     type: Directive,
@@ -1512,7 +1532,7 @@ var MatDialogClose = _MatDialogClose;
     }]
   });
 })();
-var _MatDialogLayoutSection = class _MatDialogLayoutSection {
+var MatDialogLayoutSection = class _MatDialogLayoutSection {
   constructor(_dialogRef, _elementRef, _dialog) {
     this._dialogRef = _dialogRef;
     this._elementRef = _elementRef;
@@ -1536,15 +1556,18 @@ var _MatDialogLayoutSection = class _MatDialogLayoutSection {
       });
     }
   }
+  static {
+    this.ɵfac = function MatDialogLayoutSection_Factory(t) {
+      return new (t || _MatDialogLayoutSection)(ɵɵdirectiveInject(MatDialogRef, 8), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(MatDialog));
+    };
+  }
+  static {
+    this.ɵdir = ɵɵdefineDirective({
+      type: _MatDialogLayoutSection,
+      standalone: true
+    });
+  }
 };
-_MatDialogLayoutSection.ɵfac = function MatDialogLayoutSection_Factory(t) {
-  return new (t || _MatDialogLayoutSection)(ɵɵdirectiveInject(MatDialogRef, 8), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(MatDialog));
-};
-_MatDialogLayoutSection.ɵdir = ɵɵdefineDirective({
-  type: _MatDialogLayoutSection,
-  standalone: true
-});
-var MatDialogLayoutSection = _MatDialogLayoutSection;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDialogLayoutSection, [{
     type: Directive,
@@ -1562,7 +1585,7 @@ var MatDialogLayoutSection = _MatDialogLayoutSection;
     type: MatDialog
   }], null);
 })();
-var _MatDialogTitle = class _MatDialogTitle extends MatDialogLayoutSection {
+var MatDialogTitle = class _MatDialogTitle extends MatDialogLayoutSection {
   constructor() {
     super(...arguments);
     this.id = `mat-mdc-dialog-title-${dialogElementUid++}`;
@@ -1573,31 +1596,34 @@ var _MatDialogTitle = class _MatDialogTitle extends MatDialogLayoutSection {
   _onRemove() {
     this._dialogRef?._containerInstance?._removeAriaLabelledBy?.(this.id);
   }
+  static {
+    this.ɵfac = /* @__PURE__ */ (() => {
+      let ɵMatDialogTitle_BaseFactory;
+      return function MatDialogTitle_Factory(t) {
+        return (ɵMatDialogTitle_BaseFactory || (ɵMatDialogTitle_BaseFactory = ɵɵgetInheritedFactory(_MatDialogTitle)))(t || _MatDialogTitle);
+      };
+    })();
+  }
+  static {
+    this.ɵdir = ɵɵdefineDirective({
+      type: _MatDialogTitle,
+      selectors: [["", "mat-dialog-title", ""], ["", "matDialogTitle", ""]],
+      hostAttrs: [1, "mat-mdc-dialog-title", "mdc-dialog__title"],
+      hostVars: 1,
+      hostBindings: function MatDialogTitle_HostBindings(rf, ctx) {
+        if (rf & 2) {
+          ɵɵhostProperty("id", ctx.id);
+        }
+      },
+      inputs: {
+        id: "id"
+      },
+      exportAs: ["matDialogTitle"],
+      standalone: true,
+      features: [ɵɵInheritDefinitionFeature]
+    });
+  }
 };
-_MatDialogTitle.ɵfac = /* @__PURE__ */ (() => {
-  let ɵMatDialogTitle_BaseFactory;
-  return function MatDialogTitle_Factory(t) {
-    return (ɵMatDialogTitle_BaseFactory || (ɵMatDialogTitle_BaseFactory = ɵɵgetInheritedFactory(_MatDialogTitle)))(t || _MatDialogTitle);
-  };
-})();
-_MatDialogTitle.ɵdir = ɵɵdefineDirective({
-  type: _MatDialogTitle,
-  selectors: [["", "mat-dialog-title", ""], ["", "matDialogTitle", ""]],
-  hostAttrs: [1, "mat-mdc-dialog-title", "mdc-dialog__title"],
-  hostVars: 1,
-  hostBindings: function MatDialogTitle_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      ɵɵhostProperty("id", ctx.id);
-    }
-  },
-  inputs: {
-    id: "id"
-  },
-  exportAs: ["matDialogTitle"],
-  standalone: true,
-  features: [ɵɵInheritDefinitionFeature]
-});
-var MatDialogTitle = _MatDialogTitle;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDialogTitle, [{
     type: Directive,
@@ -1616,18 +1642,21 @@ var MatDialogTitle = _MatDialogTitle;
     }]
   });
 })();
-var _MatDialogContent = class _MatDialogContent {
+var MatDialogContent = class _MatDialogContent {
+  static {
+    this.ɵfac = function MatDialogContent_Factory(t) {
+      return new (t || _MatDialogContent)();
+    };
+  }
+  static {
+    this.ɵdir = ɵɵdefineDirective({
+      type: _MatDialogContent,
+      selectors: [["", "mat-dialog-content", ""], ["mat-dialog-content"], ["", "matDialogContent", ""]],
+      hostAttrs: [1, "mat-mdc-dialog-content", "mdc-dialog__content"],
+      standalone: true
+    });
+  }
 };
-_MatDialogContent.ɵfac = function MatDialogContent_Factory(t) {
-  return new (t || _MatDialogContent)();
-};
-_MatDialogContent.ɵdir = ɵɵdefineDirective({
-  type: _MatDialogContent,
-  selectors: [["", "mat-dialog-content", ""], ["mat-dialog-content"], ["", "matDialogContent", ""]],
-  hostAttrs: [1, "mat-mdc-dialog-content", "mdc-dialog__content"],
-  standalone: true
-});
-var MatDialogContent = _MatDialogContent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDialogContent, [{
     type: Directive,
@@ -1640,37 +1669,40 @@ var MatDialogContent = _MatDialogContent;
     }]
   }], null, null);
 })();
-var _MatDialogActions = class _MatDialogActions extends MatDialogLayoutSection {
+var MatDialogActions = class _MatDialogActions extends MatDialogLayoutSection {
   _onAdd() {
     this._dialogRef._containerInstance?._updateActionSectionCount?.(1);
   }
   _onRemove() {
     this._dialogRef._containerInstance?._updateActionSectionCount?.(-1);
   }
+  static {
+    this.ɵfac = /* @__PURE__ */ (() => {
+      let ɵMatDialogActions_BaseFactory;
+      return function MatDialogActions_Factory(t) {
+        return (ɵMatDialogActions_BaseFactory || (ɵMatDialogActions_BaseFactory = ɵɵgetInheritedFactory(_MatDialogActions)))(t || _MatDialogActions);
+      };
+    })();
+  }
+  static {
+    this.ɵdir = ɵɵdefineDirective({
+      type: _MatDialogActions,
+      selectors: [["", "mat-dialog-actions", ""], ["mat-dialog-actions"], ["", "matDialogActions", ""]],
+      hostAttrs: [1, "mat-mdc-dialog-actions", "mdc-dialog__actions"],
+      hostVars: 6,
+      hostBindings: function MatDialogActions_HostBindings(rf, ctx) {
+        if (rf & 2) {
+          ɵɵclassProp("mat-mdc-dialog-actions-align-start", ctx.align === "start")("mat-mdc-dialog-actions-align-center", ctx.align === "center")("mat-mdc-dialog-actions-align-end", ctx.align === "end");
+        }
+      },
+      inputs: {
+        align: "align"
+      },
+      standalone: true,
+      features: [ɵɵInheritDefinitionFeature]
+    });
+  }
 };
-_MatDialogActions.ɵfac = /* @__PURE__ */ (() => {
-  let ɵMatDialogActions_BaseFactory;
-  return function MatDialogActions_Factory(t) {
-    return (ɵMatDialogActions_BaseFactory || (ɵMatDialogActions_BaseFactory = ɵɵgetInheritedFactory(_MatDialogActions)))(t || _MatDialogActions);
-  };
-})();
-_MatDialogActions.ɵdir = ɵɵdefineDirective({
-  type: _MatDialogActions,
-  selectors: [["", "mat-dialog-actions", ""], ["mat-dialog-actions"], ["", "matDialogActions", ""]],
-  hostAttrs: [1, "mat-mdc-dialog-actions", "mdc-dialog__actions"],
-  hostVars: 6,
-  hostBindings: function MatDialogActions_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      ɵɵclassProp("mat-mdc-dialog-actions-align-start", ctx.align === "start")("mat-mdc-dialog-actions-align-center", ctx.align === "center")("mat-mdc-dialog-actions-align-end", ctx.align === "end");
-    }
-  },
-  inputs: {
-    align: "align"
-  },
-  standalone: true,
-  features: [ɵɵInheritDefinitionFeature]
-});
-var MatDialogActions = _MatDialogActions;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDialogActions, [{
     type: Directive,
@@ -1698,21 +1730,26 @@ function getClosestDialog(element, openDialogs) {
   return parent ? openDialogs.find((dialog) => dialog.id === parent.id) : null;
 }
 var DIRECTIVES = [MatDialogContainer, MatDialogClose, MatDialogTitle, MatDialogActions, MatDialogContent];
-var _MatDialogModule = class _MatDialogModule {
+var MatDialogModule = class _MatDialogModule {
+  static {
+    this.ɵfac = function MatDialogModule_Factory(t) {
+      return new (t || _MatDialogModule)();
+    };
+  }
+  static {
+    this.ɵmod = ɵɵdefineNgModule({
+      type: _MatDialogModule,
+      imports: [DialogModule, OverlayModule, PortalModule, MatCommonModule, MatDialogContainer, MatDialogClose, MatDialogTitle, MatDialogActions, MatDialogContent],
+      exports: [MatCommonModule, MatDialogContainer, MatDialogClose, MatDialogTitle, MatDialogActions, MatDialogContent]
+    });
+  }
+  static {
+    this.ɵinj = ɵɵdefineInjector({
+      providers: [MatDialog],
+      imports: [DialogModule, OverlayModule, PortalModule, MatCommonModule, MatCommonModule]
+    });
+  }
 };
-_MatDialogModule.ɵfac = function MatDialogModule_Factory(t) {
-  return new (t || _MatDialogModule)();
-};
-_MatDialogModule.ɵmod = ɵɵdefineNgModule({
-  type: _MatDialogModule,
-  imports: [DialogModule, OverlayModule, PortalModule, MatCommonModule, MatDialogContainer, MatDialogClose, MatDialogTitle, MatDialogActions, MatDialogContent],
-  exports: [MatCommonModule, MatDialogContainer, MatDialogClose, MatDialogTitle, MatDialogActions, MatDialogContent]
-});
-_MatDialogModule.ɵinj = ɵɵdefineInjector({
-  providers: [MatDialog],
-  imports: [DialogModule, OverlayModule, PortalModule, MatCommonModule, MatCommonModule]
-});
-var MatDialogModule = _MatDialogModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDialogModule, [{
     type: NgModule,

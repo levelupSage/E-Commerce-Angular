@@ -13,7 +13,7 @@ export class CustomerService {
   constructor(private http: HttpClient) { }
 
   private createAuthorizationHeader(): HttpHeaders {
-    debugger
+    //debugger
     return new HttpHeaders().set(
       'Authorization', 'Bearer ' + UserStorageService.getToken()
     )
@@ -37,16 +37,43 @@ export class CustomerService {
       productId: productId,
       userId: UserStorageService.getUserId()
     }
-
     return this.http.post(BASIC_URL + `api/customer/cart`, cartDto, {
       headers: this.createAuthorizationHeader(),
     });
   }
 
+  increaseProductQuantity(productId: any): Observable<any> {
+    const cartDto = {
+      productId: productId,
+      userId: UserStorageService.getUserId()
+    }
+    return this.http.post(BASIC_URL + `api/customer/addition`, cartDto, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  decreaseProductQuantity(productId: any): Observable<any> {
+    const cartDto = {
+      productId: productId,
+      userId: UserStorageService.getUserId()
+    }
+    return this.http.post(BASIC_URL + `api/customer/deduction`, cartDto, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
   addCartByUserId(): Observable<any> {
-    debugger
+    //debugger
     const userId = UserStorageService.getUserId() 
     return this.http.get(BASIC_URL + `api/customer/cart/${userId}` , {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  applyCoupon(code:any): Observable<any> {
+    //debugger
+    const userId = UserStorageService.getUserId() 
+    return this.http.get(BASIC_URL + `api/customer/coupon/${userId}/${code}`, {
       headers: this.createAuthorizationHeader(),
     });
   }
