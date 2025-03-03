@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CustomerService } from '../../service/customer.service';
 import { error } from 'node:console';
+import { PlaceOrderComponent } from '../place-order/place-order.component';
 
 @Component({
   selector: 'app-cart',
@@ -79,4 +80,7 @@ export class CartComponent {
     })
   }  
 
+  placeOrder(){
+    this.dialog.open(PlaceOrderComponent);
+  }
 }

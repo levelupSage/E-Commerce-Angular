@@ -78,4 +78,11 @@ export class CustomerService {
     });
   }
 
+  placeOrder(orderDto:any): Observable<any> {
+    //debugger
+    orderDto.userId = UserStorageService.getUserId() 
+    return this.http.post(BASIC_URL + `api/customer/placeOrder`, orderDto, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
 }
