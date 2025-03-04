@@ -62,6 +62,12 @@ export class AdminService {
     });
   }
 
+  getPlaceOrders(): Observable<any>{
+    return this.http.get(BASIC_URL + 'api/admin/placeOrders', {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
   productDeleteById(productId:any): Observable<any>{
     return this.http.delete(BASIC_URL + `api/admin/product/${productId}`, {
       headers: this.createAuthorizationHeader(),
