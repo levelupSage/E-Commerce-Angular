@@ -1,0 +1,66 @@
+<div class="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Post FAQ</h2>
+    
+    <form [formGroup]="FAQForm" (ngSubmit)="postFAQ()" class="space-y-4">
+        
+        <!-- Question Input -->
+        <mat-form-field appearance="fill" class="w-full">
+            <mat-label>Question</mat-label>
+            <textarea 
+                matInput 
+                placeholder="Enter your question" 
+                formControlName="question"
+                class="p-2 border rounded-md focus:ring focus:ring-blue-300"
+            ></textarea>
+            <mat-error *ngIf="FAQForm.get('question')?.hasError('required')" class="text-red-500">
+                This Input Is Required
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Answer Input -->
+        <mat-form-field appearance="fill" class="w-full">
+            <mat-label>Answer</mat-label>
+            <textarea 
+                matInput 
+                placeholder="Enter your answer" 
+                formControlName="answer"
+                class="p-2 border rounded-md focus:ring focus:ring-blue-300"
+            ></textarea>
+            <mat-error *ngIf="FAQForm.get('answer')?.hasError('required')" class="text-red-500">
+                This Input Is Required
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Submit Button -->
+        <button 
+            mat-raised-button 
+            color="primary" 
+            type="submit" 
+            class="w-full py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
+        >
+            Post FAQ
+        </button>
+
+    </form>
+</div>
+
+
+<!-- <div class="container">
+    <h2>Post FAQ</h2>
+    <form [formGroup]="FAQForm" (ngSubmit)="postFAQ()">
+        
+        <mat-form-field appearance="outline" class="from-field">
+            <mat-label>Question</mat-label>
+            <textarea matInput placeholder="Question" formControlName="question"></textarea>
+            <mat-error *ngIf="FAQForm.get('question')?.hasError('required')">This Input Is Required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="from-field">
+            <mat-label>Answer</mat-label>
+            <textarea matInput placeholder="Answer" formControlName="answer"></textarea>
+            <mat-error *ngIf="FAQForm.get('answer')?.hasError('required')">This Input Is Required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Post FAQ</button>
+    </form>
+</div> -->

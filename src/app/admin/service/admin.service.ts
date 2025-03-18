@@ -68,6 +68,18 @@ export class AdminService {
     });
   }
 
+  changeOrderStatus(orderId: number, status: string): Observable<any>{
+    return this.http.get(BASIC_URL + `api/admin/order/${orderId}/${status}`, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  postFAQ(productId: number, faqDto: any): Observable<any>{
+    return this.http.post(BASIC_URL + `api/admin/faq/${productId}`, faqDto, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
   productDeleteById(productId:any): Observable<any>{
     return this.http.delete(BASIC_URL + `api/admin/product/${productId}`, {
       headers: this.createAuthorizationHeader(),

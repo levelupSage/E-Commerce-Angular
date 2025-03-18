@@ -5,11 +5,13 @@
     "/admin/category",
     "/admin/coupons",
     "/admin/dashboard",
+    "/admin/orders",
     "/admin/post-coupon",
     "/admin/product",
     "/customer",
     "/customer/cart",
     "/customer/dashboard",
+    "/customer/my_orders",
     "/login",
     "/signup"
   ]
